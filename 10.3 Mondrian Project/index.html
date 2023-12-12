@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body{
+      margin:0px;
+      padding:0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .grid-container{
+      display: grid;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 22px;
+      background-color: black;
+      width: 748px;
+      height: 748px;
+      gap:9px;
+    }
+    .item{
+      background-color:#F0F1EC;
+    }
+    .rbox{
+      background-color:#E72F24;
+    }
+    .wh1{
+      grid-column: span 3;
+    }
+    .wh2{
+      grid-row:span 2;
+    }
+    .wh3{
+      grid-area: 2/2/4/4;
+    }
+    .bbox{
+      background-color: #004592;
+      border-bottom: solid black 10px;
+    }
+    .ybox{
+      background-color: #F9D01E;
+    }
+    .blbox{
+      background-color: #232629;
+    }
+    .wh4{
+      grid-row:span 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+        <div class="item rbox"></div>
+        <div class="item wh1"></div>
+        <div class="item wh2"></div>
+        <div class="item wh3"></div>
+        <div class="item bbox"></div>
+        <div class="item wh4"></div>
+        <div class="item"></div>
+        <div class="item ybox"></div>
+        <div class="item blbox"></div>     
+  </div> 
+  
+</body>
+
+</html>
